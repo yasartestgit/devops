@@ -1,0 +1,13 @@
+---
+- name: install LAMP stack
+  hosts: all
+  become: yes
+  tasks: 
+    - name: install apache2 and update ubutnu packages
+      apt:
+        name: apache2
+        update_chache: yes
+        state: present
+
+
+     
